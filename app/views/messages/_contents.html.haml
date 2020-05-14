@@ -1,0 +1,73 @@
+.contents
+  .contents__top
+    .info
+      .info__name
+        Search
+      .info__message
+        D-Ateに登録されているお店を
+        %br
+        キーワードから検索します。
+    = image_tag src="food1.jpg",class:"food_img"
+    .search
+      %form
+        %input.form__keyword{placeholder: 'キーワード',class: 'keyword'}
+        %input.form__submit{type: 'submit', value: '検索する',class: 'send'}
+
+  .contents__center
+    .info
+      .info__name
+        Matching
+      .info__message
+        今、あなたが求めるお店を
+        %br
+        ご提案します。
+    = image_tag src="food2.jpg",class:"food_img"
+    .find
+      %form
+        .category
+          %label{class: "checkbox"}
+            %input{type: 'radio',name: 'category',value: '肉',class: 'cate'}
+            = icon('fas', 'drumstick-bite',class: 'c_icon')
+          %label{class: "checkbox"}
+            %input{type: 'radio',name: 'category',value: '魚',class: 'cate'}
+            = icon('fas', 'fish',class: 'c_icon') 
+          %label{class: "checkbox"}
+            %input{type: 'radio',name: 'category',value: '野菜',class: 'cate'}
+            = icon('fas', 'seedling',class: 'c_icon')
+          %label{class: "checkbox"}
+            %input{type: 'radio',name: 'category',value: 'カフェ',class: 'cate'}
+            = icon('fas', 'coffee',class: 'c_icon')
+
+        .atom
+          %label{class: "checkbox"}
+            %input{type: 'radio',name: 'atom',value: 'up'}
+            = icon('fas', 'volume-up')
+          %label{class: "checkbox"}
+            %input{type: 'radio',name: 'atom',value: 'down'}
+            = icon('fas', 'volume-down')
+
+        .cost
+          %label{class: "checkbox"}
+            %input{type: 'radio',name: 'cost',value: 'low'}
+            = icon('fas', 'coins')
+          %label{class: "checkbox"}
+            %input{type: 'radio',name: 'cost',value: 'high'}
+            = icon('fas', 'money-bill-wave-alt')
+
+        %input{type: 'submit', value: 'matching!',class: 'find_btn'}
+
+
+
+  
+  .contents__ranking
+    .info
+      .info__name
+        Ranking
+      .info__message
+        各カテゴリ上位の
+        %br
+        人気店をご紹介します。
+    = image_tag src="food3.jpg",class:"food_img"
+    .ranking
+  .foot
+    Copyright(C) D-Ate... 2020.
