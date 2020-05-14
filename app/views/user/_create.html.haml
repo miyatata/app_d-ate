@@ -1,0 +1,36 @@
+.contents
+  .contents__join
+    .info
+      .info__name
+        Join
+      .info__message
+        あなたのアカウントを作成します。
+        %br
+        アカウントを作成することで、
+        %br
+        マイリストがご利用いただけます。
+        
+    = image_tag src="food4.jpg",class:"food_img"
+    .create
+      %form
+        %label{class: "jcreate"}
+          Name
+          %input{type: 'text'}
+        %label{class: "jcreate"}
+          Nickname
+          %input{type: 'text'}
+        .jcreate
+          %label{class: "gender"}
+            %input{type: 'radio',name: 'gender'}
+              = icon('fas', 'mars')
+          %label{class: "gender"}
+            %input{type: 'radio',name: 'gender'}
+              = icon('fas', 'venus')
+        %label{class: "jcreate"}
+          Mail
+          %input{type: 'text'}
+        %label{class: "jcreate"}
+          Password
+          %input{type: 'text'}
+        %label{class: "jcreate"} 
+          %input{type: 'submit', value: 'Create!',class: 'create_btn'}

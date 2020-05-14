@@ -1,6 +1,6 @@
 .head
   .head_left
-    = link_to '#',class:"top_page" do
+    = link_to root_path,class:"top_page" do
       D-Ate...
   .head_right
     .login_btn
@@ -8,6 +8,6 @@
         = icon('fas', 'lock')
         Login
     .join_btn    
-      = link_to '#',class:"user_join" do
+      = link_to user_index_path,class:"user_join" do
         = icon('fas', 'user')
         Join
