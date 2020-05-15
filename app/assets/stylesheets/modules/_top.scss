@@ -2,84 +2,13 @@
   box-sizing: border-box;
 }
 
-@mixin font_top() {
-  line-height: 1.2em;
-  font-weight: 600;
-  font-family: 'Raleway';
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-@mixin wide_high($Width: 100%, $Hight: 100%) {
-  width: $Width;
-  height: $Hight;
-}
-
-@mixin font_s_c($fSize: 0, $fColor: #ffffff) {
-  font-size: $fSize;
-  color: $fColor;
-}
-
-@mixin food_img {
-  .food_img{
-    @include wide_high();
-    position: absolute;
-    z-index: 10;
-  }
-}
-
-@mixin shadow{
-  position: absolute;
-  @include wide_high();
-  background-color: rgba(255,230,204,0.4);
-  border-left: 20px solid #ff8000;
-  z-index: 20;
-}
-
-@mixin info(){
-  .info{
-    position: absolute;
-    z-index: 30;
-    
-    margin-top: 20px;
-    margin-left: 5px;
-    letter-spacing: 0.2em;
-    color: #ffffff;
-    &__name{
-      font-size: 25px;
-      background: linear-gradient(transparent 50%, #ff8000 50%);
-    }
-    &__message{
-      font-size: 15px;
-      margin-top: 2px;
-      margin-left: 20px;
-    }
-  }
-}
-
-@mixin find_form {
-  @include wide_high(90px,200px);
-  background-color:rgba(255,255,255,0.75);
-  z-index: 40;
-  border: 2px solid #ff8000;
-  border-radius: 7px;
-  margin-left: 10px;
-
-  label{
-    display: block;
-    color:#ff8000;
-    font-size: 20px;
-    margin: auto 20px;
-    line-height: 2.3;
-  }
-}
 
 .head {
   @include font_top();
   @include wide_high(100vw, 100px);
   z-index: 50;
   background-color: #eeeeee;
-  border-bottom: 4px solid #ff8000;
+  border-bottom: 4px solid $color_accent;
   position: fixed;
   padding: 0 160px;
   line-height: 100px;
@@ -99,14 +28,14 @@
       cursor: pointer;
       text-align: center;
       .user_login {
-        @include font_s_c(15px, #ff8000);
+        @include font_s_c(15px, $color_accent);
         text-decoration: none;
       }
     }
     .login_btn:hover {
-      background-color: #ff8000;
+      background-color: $color_accent;
       .user_login {
-        @include font_s_c(15px, #ffffff);
+        @include font_s_c(15px, $color_base);
         text-decoration: none;
       }
     }
@@ -116,14 +45,14 @@
       text-align: center;
       .user_join {
         text-decoration: none;
-        color: #ff8000;
+        color: $color_accent;
       }
     }
     .join_btn:hover {
-      background-color: #ff8000;
+      background-color: $color_accent;
       .user_join {
         text-decoration: none;
-        color: #ffffff;
+        color: $color_base;
       }
     }
   }
@@ -147,16 +76,16 @@
         padding: 100px 100px;
         .keyword{
           @include wide_high(300px,60px);
-          border: 2px solid #ff8000;
+          border: 2px solid $color_accent;
           border-radius: 7px;
           background-color:rgba(255,255,255,0.75);
         }
         .send{
           @include wide_high(120px,60px);
           margin-left: 20px;
-          background-color: #ff8000;
-          color: #ffffff;
-          border: 2px solid #ff8000;
+          background-color: $color_accent;
+          color: $color_base;
+          border: 2px solid $color_accent;
           border-radius: 7px;          
         }
       }
@@ -189,9 +118,9 @@
         .find_btn{
           @include wide_high(120px,60px);
           margin-left: 20px;
-          background-color: #ff8000;
-          color: #ffffff;
-          border: 2px solid #ff8000;
+          background-color: $color_accent;
+          color: $color_base;
+          border: 2px solid $color_accent;
           border-radius: 7px;
           
           letter-spacing: 0.1em;
@@ -218,10 +147,10 @@
 .foot{
   @include font_top();
   @include wide_high(100%, 50px);
-  @include font_s_c(12px, #ffffff);
+  @include font_s_c(12px, $color_base);
   position: relative;
   bottom: 0px;
-  background-color: #ff8000;
+  background-color: $color_accent;
   line-height: 50px;
   text-align: center;
   z-index: 50;

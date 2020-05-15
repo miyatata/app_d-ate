@@ -1,0 +1,76 @@
+$color_accent:#ff8000;
+$color_base: #ffffff;
+
+@mixin font_top() {
+  line-height: 1.2em;
+  font-weight: 600;
+  font-family: 'Raleway';
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+@mixin wide_high($Width: 100%, $Hight: 100%) {
+  width: $Width;
+  height: $Hight;
+}
+
+@mixin font_s_c($fSize: 0, $fColor: $color_base) {
+  font-size: $fSize;
+  color: $fColor;
+}
+
+@mixin food_img {
+  .food_img{
+    @include wide_high();
+    position: absolute;
+    z-index: 10;
+  }
+}
+
+
+
+@mixin shadow{
+  position: absolute;
+  @include wide_high();
+  background-color: rgba(255,230,204,0.4);
+  border-left: 20px solid $color_accent;
+  z-index: 20;
+}
+
+@mixin info(){
+  .info{
+    position: absolute;
+    z-index: 30;
+    
+    margin-top: 20px;
+    margin-left: 5px;
+    letter-spacing: 0.2em;
+    color: $color_base;
+    &__name{
+      font-size: 25px;
+      background: linear-gradient(transparent 50%,$color_accent 50%);
+    }
+    &__message{
+      font-size: 15px;
+      margin-top: 2px;
+      margin-left: 20px;
+    }
+  }
+}
+
+@mixin find_form {
+  @include wide_high(90px,200px);
+  background-color:rgba(255,255,255,0.75);
+  z-index: 40;
+  border: 2px solid $color_accent;
+  border-radius: 7px;
+  margin-left: 10px;
+
+  label{
+    display: block;
+    color:$color_accent;
+    font-size: 20px;
+    margin: auto 20px;
+    line-height: 2.3;
+  }
+}
