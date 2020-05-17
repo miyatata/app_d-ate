@@ -28,7 +28,6 @@ $color_base: #ffffff;
 }
 
 
-
 @mixin shadow{
   position: absolute;
   @include wide_high();
@@ -72,5 +71,31 @@ $color_base: #ffffff;
     font-size: 20px;
     margin: auto 20px;
     line-height: 2.3;
+  }
+}
+
+@mixin btn_s_c($fColor) {
+  font-size: 11.6px;
+  color: $fColor;
+}
+
+@mixin head_btn{
+  
+  &__btn {
+    @include wide_high(100px);
+    display: block;
+    cursor: pointer;
+    text-align: center;
+    .btn {
+      @include btn_s_c($color_accent);
+      text-decoration: none;
+    }
+  }
+  &__btn:hover {
+    background-color: $color_accent;
+    .btn {
+      @include btn_s_c($color_base);
+      text-decoration: none;
+    }
   }
 }

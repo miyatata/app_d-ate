@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
+  
+  root 'top#index'
   devise_for :users
-  root 'top#index'
-  
-  
 
-  resources :user, only: [:index,:new,:create]
-  root 'top#index'
+  resources :users, only: [:edit, :update, :destroy]
+  resources :shop, only: [:index,:create]  
+
 end

@@ -22,39 +22,7 @@
   }
   .head_right { 
     display: flex;
-    .login_btn {
-      @include wide_high(100px);
-      display: block;
-      cursor: pointer;
-      text-align: center;
-      .user_login {
-        @include font_s_c(15px, $color_accent);
-        text-decoration: none;
-      }
-    }
-    .login_btn:hover {
-      background-color: $color_accent;
-      .user_login {
-        @include font_s_c(15px, $color_base);
-        text-decoration: none;
-      }
-    }
-    .join_btn {
-      @include wide_high(100px);
-      cursor: pointer;
-      text-align: center;
-      .user_join {
-        text-decoration: none;
-        color: $color_accent;
-      }
-    }
-    .join_btn:hover {
-      background-color: $color_accent;
-      .user_join {
-        text-decoration: none;
-        color: $color_base;
-      }
-    }
+    @include head_btn();
   }
 }
 

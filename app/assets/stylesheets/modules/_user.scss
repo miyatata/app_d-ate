@@ -10,23 +10,22 @@
     margin: 10px 160px 10px;
     .create{
       @include shadow();
-      form{
-        @include wide_high(500px,440px);
-        background-color:rgba(255,255,255,0.75);
-        z-index: 40;
-        border: 2px solid #ff8000;
-        border-radius: 7px;
-        margin: 160px auto 30px;
-        .jcreate{
-          margin: 24px 150px;
-          display: block;
-          .gender{
-            margin-right: 40px;
+      .form{
+          @include wide_high(500px,440px);
+          background-color:rgba(255,255,255,0.75);
+          z-index: 40;
+          border: 2px solid #ff8000;
+          border-radius: 7px;
+          margin: 160px auto 30px;
+        form{
+          .jcreate{
+            margin: 24px 150px;
+            display: block;
+            .gender{
+              margin-right: 40px;
+            }
           }
-
         }
-        
-
       }
     }
   }
