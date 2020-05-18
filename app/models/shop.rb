@@ -1,3 +1,2 @@
 class Shop < ApplicationRecord
-  
 end

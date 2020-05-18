@@ -12,5 +12,16 @@
     = image_tag src="food4.jpg",class:"food_img"
     .create
       .form
-      
- 
+        =form_for @shop do |f|
+          .field
+            = f.label :Name
+            %br/
+            = f.text_field :name
+
+          
+          .field
+            = f.label :url
+            %br/
+            = f.text_field :url
+          .actions
+            = f.submit "登録"

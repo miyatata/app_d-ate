@@ -5,7 +5,7 @@
   .head_right
     - if current_user
       .head_right__btn  
-        = link_to shop_index_path,class:"btn" do
+        = link_to new_shop_path,class:"btn" do
           = icon('fas', 'utensils') 
           new
       .head_right__btn    
@@ -18,7 +18,7 @@
           Logout
     - else
       .head_right__btn  
-        = link_to shop_index_path,class:"btn" do
+        = link_to new_shop_path,class:"btn" do
           = icon('fas', 'utensils') 
           new
       .head_right__btn    
